@@ -88,7 +88,7 @@ public class GenerateZabbixTemplate {
 		result += Utility.addTabNewLine(1, Utility.createXMLCloseTag(ZabbixTags.templates)); // Templates close
 
 		result += Utility.addTabNewLine(1, Utility.createXMLUnusedTag(ZabbixTags.triggers)); // Triggers
-		result += Utility.addTabNewLine(1, Utility.createXMLUnusedTag(ZabbixTags.valuemap)); // Value maps
+		result += Utility.addTabNewLine(1, Utility.createXMLUnusedTag(ZabbixTags.valuemaps)); // Value maps
 
 		result += Utility.addTabNewLine(0, Utility.createXMLCloseTag(ZabbixTags.zabbixExport)); // Zabbix export close
 		
@@ -130,20 +130,20 @@ public class GenerateZabbixTemplate {
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.valueType) + valueType + Utility.createXMLCloseTag(ZabbixTags.valueType));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.allowedHosts));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.units));
-		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.delta));
+		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.delta) + valueType + Utility.createXMLCloseTag(ZabbixTags.delta));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.snmpv3ContextName));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.snmpv3SecurityName));
-		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.snmpv3SecurityLevel));
-		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.snmpv3AuthProtocol));
+		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.snmpv3SecurityLevel) + "0" + Utility.createXMLCloseTag(ZabbixTags.snmpv3SecurityLevel));
+		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.snmpv3AuthProtocol) + "0" + Utility.createXMLCloseTag(ZabbixTags.snmpv3AuthProtocol));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.snmpv3AuthPassphrase));
-		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.snmpv3PrivProtocol));
+		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.snmpv3PrivProtocol) + "0" + Utility.createXMLCloseTag(ZabbixTags.snmpv3PrivProtocol));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.snmpv3PrivPassphrase));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.formula) + "1" + Utility.createXMLCloseTag(ZabbixTags.formula));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.delayFlex));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.params));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.ipmiSensor));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.dataType) + "0" + Utility.createXMLCloseTag(ZabbixTags.dataType));
-		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.authtype));
+		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLOpenTag(ZabbixTags.authtype) + "0" + Utility.createXMLCloseTag(ZabbixTags.authtype));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.username));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.password));
 		result += Utility.addTabNewLine(tabNum+1, Utility.createXMLUnusedTag(ZabbixTags.publickey));

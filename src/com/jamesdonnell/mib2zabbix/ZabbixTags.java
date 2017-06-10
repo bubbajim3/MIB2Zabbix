@@ -8,7 +8,7 @@ public class ZabbixTags {
 	public static final String date = "date";
 	public static final String groups = "groups";
 	public static final String group = "group";
-	public static final String name = "names";
+	public static final String name = "name";
 	public static final String templates = "templates";
 	public static final String template = "template";
 	public static final String description = "description";
@@ -49,6 +49,7 @@ public class ZabbixTags {
 	public static final String port = "port";
 	public static final String inventoryLink = "inventory_link";
 	public static final String valuemap = "valuemap";
+	public static final String valuemaps = "value_maps";
 	public static final String logtimefmt = "logtimefmt";
 	public static final String discoveryRules = "discovery_rules";
 	public static final String macros = "macros";
